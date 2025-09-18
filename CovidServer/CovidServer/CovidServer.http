@@ -1,0 +1,25 @@
+@CovidServer_HostAddress = http://localhost:5022
+
+# Test OData COVID Summary API
+GET {{CovidServer_HostAddress}}/odata/CovidSummaryOData?type=Confirmed
+Accept: application/json
+
+###
+
+# Test OData COVID Summary API - Deaths
+GET {{CovidServer_HostAddress}}/odata/CovidSummaryOData?type=Deaths
+Accept: application/json
+
+###
+
+# Test Daily Increase API
+GET {{CovidServer_HostAddress}}/odata/CovidDailyIncrease?type=Confirmed&date=2023-12-02
+Accept: application/json
+
+###
+
+# Get available dates
+GET {{CovidServer_HostAddress}}/odata/CovidDailyIncrease/dates
+Accept: application/json
+
+###
