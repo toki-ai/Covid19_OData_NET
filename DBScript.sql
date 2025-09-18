@@ -16,7 +16,7 @@ CREATE TABLE Locations (
 CREATE TABLE DailyMetrics (
     MetricID INT IDENTITY(1,1) PRIMARY KEY, -- Sử dụng IDENTITY thay SERIAL
     LocationID INT NOT NULL FOREIGN KEY REFERENCES Locations(LocationID), -- FK đến Locations
-    Date DATE NOT NULL, -- Ngày dữ liệu (e.g., '2022-02-21')
+    Date DATETIME NOT NULL, -- Ngày dữ liệu (e.g., '2022-02-21')
     Confirmed BIGINT DEFAULT 0, -- Số ca Confirmed (tích lũy)
     Deaths BIGINT DEFAULT 0, -- Số ca Deaths (tích lũy)
     Recovered BIGINT DEFAULT 0, -- Số ca Recovered (tích lũy)
